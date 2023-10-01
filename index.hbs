@@ -1,39 +1,25 @@
 {{!< default}}
 
-<div class="container">
-    <div class="row">
-        <div class="content-column col-xl-9 col-lg-8 col-12">
-            <div class="content-area">
-                <main class="site-main">
-                    <div class="post-feed container">
-                        {{#is "home"}}
-                            <div class="row">
-                                {{#foreach posts visibility="all" from=0 to=4}}
-                                    {{#if @first}}
-                                        {{> "post-card"}}
-                                    {{else}}
-                                        {{> "post-card" noContent=true}}
-                                    {{/if}}
-                                {{/foreach}}
-                            </div>
-                            {{#foreach posts visibility="all" from=5}}
-                                {{> "loop"}}
-                            {{/foreach}}
-                        {{/is}}
-                        {{#is "paged"}}
-                            {{#foreach posts visibility="all"}}
-                                {{> "loop"}}
-                            {{/foreach}}
-                        {{/is}}
-                    </div>
-                    {{pagination}}
-                </main>
+<main class="gh-main gh-outer">
+    <div class="gh-inner">
+
+        <section class="gh-pagehead">
+            <h1 class="gh-pagehead-title">Latest</h1>
+        </section>
+
+        <div class="gh-topic gh-topic-grid">
+            <div class="gh-topic-content gh-feed">
+                {{#match pagination.page 2}}
+                    {{#get "posts" include="authors" limit=@config.posts_per_page as |recent|}}
+                        {{#foreach recent}}
+                            {{> "loop-grid"}}
+                        {{/foreach}}
+                    {{/get}}
+                {{/match}}
+                {{#foreach posts}}
+                    {{> "loop-grid" has_large_post=false}}
+                {{/foreach}}
             </div>
         </div>
-        <div class="sidebar-column col-xl-3 col-lg-4 col-12">
-            {{> widgets/widgets}}
-        </div>
     </div>
-</div>
-
-
+</main>

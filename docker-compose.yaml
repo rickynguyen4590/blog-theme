@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
     node:
-        image: node:14-alpine
+        image: node:18-alpine
         restart: unless-stopped
         working_dir: /var/lib/ghost/content/themes/kikiuru-blog
         volumes:
@@ -11,7 +11,7 @@ services:
             - yarn
             - dev
     ghost:
-        image: ghost:4-alpine
+        image: ghost:5-alpine
         restart: unless-stopped
         volumes:
             - .:/var/lib/ghost/content/themes/kikiuru-blog
@@ -20,7 +20,6 @@ services:
             - 2368:2368
         environment:
             NODE_ENV: development
-            # see https://docs.ghost.org/docs/config#section-running-ghost-with-config-env-variables
             database__client: mysql
             database__connection__host: mariadb
             database__connection__user: root
@@ -28,3 +27,12 @@ services:
             database__connection__database: ghost
             # this url value is just an example, and is likely wrong for your environment!
             url: http://localhost:2368
+    mariadb:
+        image: mariadb:10.6.8
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=ghost
+        volumes:
+            - mariadb_data:/var/lib/mysql
+volumes:
+    mariadb_data:
