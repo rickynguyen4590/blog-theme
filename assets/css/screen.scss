@@ -1,6 +1,6 @@
 @import "@tryghost/shared-theme-assets/assets/css/v1/screen.css";
-@import "fonts.css";
-@import "widget.css";
+@import "fonts";
+@import "widget";
 
 :root {
     --font-sans: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
@@ -648,7 +648,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     padding-top: 80px;
     padding-bottom: 120px;
     margin-top: 120px;
-    background-color: var(--color-darker-gray);
+    background-color: var(--color-light-gray);
 }
 
 .page-template .gh-foot {
@@ -658,7 +658,12 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 .gh-foot,
 .gh-foot a,
 .gh-foot a:hover {
-    color: var(--color-white);
+    color: var(--color-black);
+}
+.gh-foot {
+  .gh-subscribe-title, .gh-copyright {
+    color: var(--color-black);
+  }
 }
 
 .gh-foot-inner {

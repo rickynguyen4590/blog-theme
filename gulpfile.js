@@ -8,6 +8,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const beeper = require('beeper');
 const zip = require('gulp-zip');
+const sassx = require('gulp-sass')(require('sass'));
 
 // postcss plugins
 const easyimport = require('postcss-easy-import');
@@ -37,7 +38,8 @@ function hbs(done) {
 
 function css(done) {
     pump([
-        src('assets/css/screen.css', {sourcemaps: true}),
+        src('assets/css/screen.scss', {sourcemaps: true}),
+        sassx().on('error', sassx.logError),
         postcss([
             easyimport,
             autoprefixer(),
@@ -79,7 +81,7 @@ function zipper(done) {
 }
 
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs);
-const cssWatcher = () => watch('assets/css/**/*.css', css);
+const cssWatcher = () => watch('assets/css/**/*.scss', css);
 const jsWatcher = () => watch('assets/js/**/*.js', js);
 const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher);
 const build = series(css, js);

@@ -12,7 +12,7 @@ services:
             - dev
     ghost:
         image: ghost:5-alpine
-        restart: unless-stopped
+        restart: always
         volumes:
             - .:/var/lib/ghost/content/themes/kikiuru-blog
             - ./.images:/var/lib/ghost/content/images
@@ -29,6 +29,7 @@ services:
             url: http://localhost:2368
     mariadb:
         image: mariadb:10.6.8
+        restart: always
         environment:
             - MYSQL_ROOT_PASSWORD=root
             - MYSQL_DATABASE=ghost
