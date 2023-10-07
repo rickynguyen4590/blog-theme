@@ -1,6 +1,6 @@
 @import "@tryghost/shared-theme-assets/assets/css/v1/screen.css";
+@import "highlight.js/styles/atom-one-light.css";
 @import "fonts";
-@import "widget";
 
 :root {
     --font-sans: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
@@ -898,3 +898,6 @@ body:not(.home-template) .gh-topic-grid .gh-card {
         line-height: 1;
     }
 }
+@import "widget";
+@import "copy";
+@import "custom";
