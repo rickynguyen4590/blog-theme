@@ -16,8 +16,8 @@ function loadFb() {
   const script = document.createElement('script');
   script.crossOrigin = "anonymous";
   script.async = true;
-  script.nonce = "hRevMNbZ";
-  script.src = "https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=429146018231335";
+  script.nonce = "mnd0teJ6";
+  script.src = "https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0&appId=429146018231335";
   document.getElementsByTagName('head')[0].appendChild(script);
 }
 
@@ -47,7 +47,7 @@ function highlight() {
 
 (function () {
   pagination()
-  idleLong(loadFb);
+  idleLong(loadFb, 10);
   idleLong(loadGG, 10);
   idle(highlight, 10);
 
