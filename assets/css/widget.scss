@@ -1,125 +1,125 @@
 .widget-area {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--color-white);
-    padding-left: var(--gap);
-    padding-right: var(--gap);
-    padding-top: 20px;
-    margin-bottom: 50px;
-    flex-wrap: wrap;
-    align-items: flex-start;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+  padding-top: 20px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .widget {
-    width: 30%;
-    padding: 20px;
-    height: 350px;
-    margin: 5px;
+  width: 30%;
+  padding: 10px;
+  min-height: 200px;
 }
+
 .gh-foot .widget, .gh-foot .widget a, .gh-foot .widget a:hover {
-    color: var(--color-black);
+  color: var(--color-black);
 }
 
 .widget-no-title {
-    padding: 5px;
+  padding: 5px;
 }
 
 .widget-title {
-    border-bottom: 1px solid var(--light-gray-color);
-    color: var(--color-black);
-    font-family: var(--font-base);
-    font-size: 11px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    align-items: center;
-    border-bottom: 1px solid var(--color-light-gray);
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 24px;
-    padding-bottom: 12px;
+  border-bottom: 1px solid var(--light-gray-color);
+  color: var(--color-black);
+  font-family: var(--font-base);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  align-items: center;
+  border-bottom: 1px solid var(--color-light-gray);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
 }
 
 .widget-tags .tag + .tag {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .widget-tags .tag-link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .widget-tags .tag-name {
-    font-family: var(--font-alt);
-    font-size: 16px;
-    font-weight: 600;
+  font-family: var(--font-alt);
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .widget-tags .tag-count {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 24px;
-    height: 24px;
-    color: var(--color-white);
-    font-size: 12px;
-    font-weight: 700;
-    background-color: var(--primary-color);
-    border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 24px;
+  height: 24px;
+  color: var(--color-primary-text);
+  font-size: 12px;
+  font-weight: 700;
+  background-color: var(--primary-color);
+  border-radius: 50%;
 }
 
 .widget-recent .recent {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .widget-recent .recent + .recent {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .widget-recent .post-header {
-    overflow: hidden;
-    margin-bottom: 0;
+  overflow: hidden;
+  margin-bottom: 0;
 }
 
 .widget-recent .post-title {
-    overflow: hidden;
-    font-size: 16px;
-    font-weight: 600;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .widget-recent .post-date {
-    margin-top: 3px;
+  margin-top: 3px;
 }
 
 .widget-facebook {
-    min-height: 200px;
+  min-height: 200px;
 }
 
 .widget-facebook .loading {
-    display: inline-block;
-    width: 50px;
+  display: inline-block;
+  width: 50px;
 }
 
 .widget-facebook .icon {
-    font-size: 40px;
-    opacity: 0.8;
+  font-size: 40px;
+  opacity: 0.8;
 }
 
 .widget-facebook blockquote {
-    border: none;
-    position: unset;
-    background: unset;
-    text-align: center;
+  border: none;
+  position: unset;
+  background: unset;
+  text-align: center;
 }
 
 .widget-friends .friend {
-    color: var(--mid-gray-color);
-    font-size: 12pt;
-    padding: 0.5rem 0;
+  color: var(--mid-gray-color);
+  font-size: 12pt;
+  padding: 0.5rem 0;
 }
 
 .widget-friends .friend-name {
@@ -127,12 +127,21 @@
 }
 
 .widget-friends .friend-desc {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 @media (max-width: 767px) {
-    .widget-title {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+  .widget-title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .widget {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1028px) and (min-width: 768px) {
+  .widget {
+    width: 50%;
+  }
 }
