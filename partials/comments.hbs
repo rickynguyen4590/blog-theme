@@ -1,11 +1,17 @@
 {{#is "post"}}
-    {{#if comments}}
-        <div class="gh-comments gh-read-next gh-canvas">
-            <section class="gh-pagehead">
-                <h4 class="gh-pagehead-title">Comments ({{comment_count empty="0" singular="" plural=""}})</h3>
-            </section>
-            {{comments title="" count=false}}
-            <div class="fb-comments" data-href="{{url absolute="true"}}" data-numposts="10"></div>
-        </div>
-    {{/if}}
+  {{#if comments}}
+    <div class="gh-comments gh-read-next gh-canvas">
+      <section class="gh-pagehead">
+        <h4 class="gh-pagehead-title">Comments ({{comment_count empty="0" singular="" plural=""}})</h3>
+      </section>
+      {{comments title="" count=false}}
+
+    </div>
+    <div class="gh-comments fb-gh-comments gh-read-next gh-canvas">
+      <section class="gh-pagehead">
+        <h4 class="gh-pagehead-title">Facebook Comments</h4>
+      </section>
+      <div class="fb-comments" data-href="{{url absolute="true"}}" data-numposts="10" width="100%"></div>
+    </div>
+  {{/if}}
 {{/is}}
