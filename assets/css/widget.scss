@@ -99,6 +99,7 @@
 }
 
 .widget-facebook {
+  margin-top: 50px;
   min-height: 200px;
 }
 
@@ -131,6 +132,14 @@
 
 .widget-friends .friend-desc {
   text-transform: capitalize;
+}
+
+.widget-head {
+  overflow: hidden;
+  a {
+    word-break: break-word;
+    white-space: normal;
+  }
 }
 
 @media (max-width: 767px) {
