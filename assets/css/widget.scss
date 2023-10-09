@@ -1,12 +1,15 @@
-.widget-area {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+.widget-footer {
   background-color: var(--color-white);
   padding-left: var(--gap);
   padding-right: var(--gap);
   padding-top: 20px;
   margin-bottom: 50px;
+}
+
+.widget-area {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-start;
 }

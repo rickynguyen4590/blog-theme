@@ -83,7 +83,11 @@
                 {{/if}}
             </div>
         </div>
-        {{> "widgets/widgets"}}
+        <div class="widget-footer">
+          <div class="gh-inner">
+            {{> "widgets/widgets"}}
+          </div>
+        </div>
         <div class="gh-outer">
             <div class="gh-foot-inner gh-inner">
                 <nav class="gh-foot-menu">
@@ -106,8 +110,5 @@
 {{/is}}
 
 <script src="{{asset "built/main.min.js"}}"></script>
-
-
 </body>
-
 </html>
