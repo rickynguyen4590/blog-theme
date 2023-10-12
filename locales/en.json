@@ -1,9 +1,11 @@
 {
+  "Sign in": "Sign in",
   "Back": "Back",
   "Newer Posts": "Newer Posts",
   "Older Posts": "Older Posts",
   "Page {page} of {pages}": "Page {page} of {pages}",
   "Subscribe": "Subscribe",
+  "Subscribe now": "Subscribe now",
   "Subscribe to {blogtitle}": "Subscribe to {blogtitle}",
   "Subscribed!": "Subscribed!",
   "with the email address": "with the email address",

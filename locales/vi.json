@@ -1,9 +1,12 @@
+
 {
+  "Sign in": "Đăng nhập",
   "Back": "Back",
   "Newer Posts": "Newer Posts",
   "Older Posts": "Older Posts",
   "Page {page} of {pages}": "{page} - {pages}",
   "Subscribe": "Đăng kí",
+  "Subscribe now": "Đăng kí ngay!",
   "Subscribe to {blogtitle}": "Đăng kí {blogtitle}",
   "Subscribed!": "Đã đăng kí!",
   "with the email address": "with the email address",
